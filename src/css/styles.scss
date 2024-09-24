@@ -1,1 +1,147 @@
 @import "./reset.css";
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// GENERAL
+
+// HEADER
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(90deg, #00c3ff, #9246f3);
+  padding: 5px 20px;
+
+  h1 {
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  nav {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+}
+
+.users {
+    margin-right: 10px;
+  }
+
+.users,
+.top-nav {
+  display: flex;
+  align-items: center;
+}
+
+.users {
+  img {
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-sizing: border-box;
+  }
+
+  li {
+    position: relative;
+  }
+
+  li:nth-of-type(1) img {
+    z-index: 4;
+    position: relative;
+    margin-right: -5px;
+  }
+
+  li:nth-of-type(2) img {
+    z-index: 3;
+    position: relative;
+    margin-right: -5px;
+  }
+
+  li:nth-of-type(3) img {
+    z-index: 2;
+    position: relative;
+  }
+
+  i {
+    background-color: rgba(255, 255, 255, 0.317);
+    border-radius: 50%;
+    // width: 40px;
+    // height: 40px;
+    font-size: 20px;
+    padding: 10px 12px;
+    margin-left: 5px;
+  }
+
+  .fa-plus {
+    color: white;
+  }
+}
+
+
+
+// header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     padding: 10px 20px;
+//     background: linear-gradient(90deg, #00C3FF, #9246F3);
+//   }
+
+//   header div h1 {
+//     color: white;
+//     font-size: 24px;
+//   }
+
+//   nav {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     flex-grow: 1;
+//   }
+
+//   .users, .top-nav {
+//     list-style-type: none;
+//     display: flex;
+//     align-items: center;
+//     margin: 0;
+//     padding: 0;
+//   }
+
+//   .users li, .top-nav li {
+//     margin-left: 15px;
+//   }
+
+//   .users li img {
+//     width: 40px;
+//     height: 40px;
+//     border-radius: 50%;
+//     border: 2px solid white;
+//   }
+
+//   .top-nav li i {
+//     color: white;
+//     font-size: 20px;
+//     cursor: pointer;
+//   }
+
+//   .fa-plus {
+//     color: white;
+//     font-size: 24px;
+//     cursor: pointer;
+//   }
