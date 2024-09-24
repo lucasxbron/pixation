@@ -1,0 +1,15 @@
+{
+  "name": "pixation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "sass ./src/css/styles.scss ./src/css/styles.css --no-source-map --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.79.3"
+  }
+}
