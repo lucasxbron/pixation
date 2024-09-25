@@ -1,5 +1,9 @@
 @import "./reset.css";
 
+$primary-color: #333;
+$btn-bgn-color: rgba(255, 255, 255, 0.153);
+$default-radius: 5px;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -8,18 +12,22 @@
 
 // GENERAL
 
+body {
+  margin: 4px;
+}
+
 // HEADER
-
-
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  border-top-left-radius: $default-radius;
+  border-top-right-radius: $default-radius;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
   background: linear-gradient(90deg, #00c3ff, #9246f3);
   padding: 5px 20px;
 
@@ -36,8 +44,8 @@ header {
 }
 
 .users {
-    margin-right: 10px;
-  }
+  margin-right: 10px;
+}
 
 .users,
 .top-nav {
@@ -74,74 +82,67 @@ header {
     position: relative;
   }
 
-  i {
-    background-color: rgba(255, 255, 255, 0.317);
+  // i {
+  //   background-color: rgba(255, 255, 255, 0.317);
+  //   border-radius: 50%;
+  //   // width: 40px;
+  //   // height: 40px;
+  //   font-size: 20px;
+  //   padding: 10px 12px;
+  //   margin-left: 5px;
+  // }
+
+  button {
+    @include flex-center;
     border-radius: 50%;
-    // width: 40px;
-    // height: 40px;
-    font-size: 20px;
-    padding: 10px 12px;
-    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: $btn-bgn-color;
+    box-sizing: border-box;
+    margin-left: -5px;
+    margin-top: -2px;
   }
 
   .fa-plus {
     color: white;
+    font-size: 1rem;
+  }
+
+  button,
+  img {
+    cursor: pointer;
+  }
+}
+
+.top-nav {
+  button {
+    background-color: $btn-bgn-color;
+    border: none;
+    border-radius: $default-radius;
+    height: 40px;
+    cursor: pointer;
+  }
+  li:nth-of-type(1) button {
+    height: 40px;
+    width: 60px;
+  }
+  li:nth-of-type(2) button,
+  li:nth-of-type(3) button {
+    margin-left: 4px;
+    width: 40px;
+  }
+
+  i {
+    color: white;
+    font-size: 1rem;
   }
 }
 
 
+// MAIN
 
-// header {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     padding: 10px 20px;
-//     background: linear-gradient(90deg, #00C3FF, #9246F3);
-//   }
-
-//   header div h1 {
-//     color: white;
-//     font-size: 24px;
-//   }
-
-//   nav {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     flex-grow: 1;
-//   }
-
-//   .users, .top-nav {
-//     list-style-type: none;
-//     display: flex;
-//     align-items: center;
-//     margin: 0;
-//     padding: 0;
-//   }
-
-//   .users li, .top-nav li {
-//     margin-left: 15px;
-//   }
-
-//   .users li img {
-//     width: 40px;
-//     height: 40px;
-//     border-radius: 50%;
-//     border: 2px solid white;
-//   }
-
-//   .top-nav li i {
-//     color: white;
-//     font-size: 20px;
-//     cursor: pointer;
-//   }
-
-//   .fa-plus {
-//     color: white;
-//     font-size: 24px;
-//     cursor: pointer;
-//   }
+main {
+  height: 100%;
+  background-color: grey;
+}

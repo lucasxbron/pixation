@@ -1,12 +1,14 @@
 @import "./reset.css";
+body {
+  margin: 4px;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   background: linear-gradient(90deg, #00c3ff, #9246f3);
   padding: 5px 20px;
 }
@@ -53,13 +55,50 @@ header nav {
   z-index: 2;
   position: relative;
 }
-.users i {
-  background-color: rgba(255, 255, 255, 0.317);
+.users button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  font-size: 20px;
-  padding: 10px 12px;
-  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.153);
+  box-sizing: border-box;
+  margin-left: -5px;
+  margin-top: -2px;
 }
 .users .fa-plus {
   color: white;
+  font-size: 1rem;
+}
+.users button,
+.users img {
+  cursor: pointer;
+}
+
+.top-nav button {
+  background-color: rgba(255, 255, 255, 0.153);
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+}
+.top-nav li:nth-of-type(1) button {
+  height: 40px;
+  width: 60px;
+}
+.top-nav li:nth-of-type(2) button,
+.top-nav li:nth-of-type(3) button {
+  margin-left: 4px;
+  width: 40px;
+}
+.top-nav i {
+  color: white;
+  font-size: 1rem;
+}
+
+main {
+  height: 100%;
+  background-color: grey;
 }
