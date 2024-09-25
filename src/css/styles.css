@@ -3,12 +3,20 @@ body {
   margin: 4px;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: sticky;
+  top: 4px;
+  left: 4px;
+  right: 4px;
   background: linear-gradient(90deg, #00c3ff, #9246f3);
   padding: 5px 20px;
 }
@@ -62,7 +70,6 @@ header nav {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  border: none;
   background-color: rgba(255, 255, 255, 0.153);
   box-sizing: border-box;
   margin-left: -5px;
@@ -79,10 +86,8 @@ header nav {
 
 .top-nav button {
   background-color: rgba(255, 255, 255, 0.153);
-  border: none;
   border-radius: 5px;
   height: 40px;
-  cursor: pointer;
 }
 .top-nav li:nth-of-type(1) button {
   height: 40px;
@@ -96,4 +101,97 @@ header nav {
 .top-nav i {
   color: white;
   font-size: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 6fr 9fr;
+  background-color: rgb(226, 226, 226);
+}
+
+main {
+  height: 90vh;
+}
+main nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
+}
+main ul {
+  margin-top: 2rem;
+}
+main li {
+  margin-bottom: 2rem;
+}
+main li p {
+  text-align: center;
+  padding-top: 3px;
+}
+main .dark-mode {
+  margin-bottom: 2rem;
+}
+
+.finder {
+  display: flex;
+}
+.finder .finder-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+.finder input, .finder .search-btn, .finder .results, .finder .cat-btn, .finder .results {
+  width: 90%;
+}
+.finder input, .finder button {
+  height: 40px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.finder .search-btn {
+  margin-bottom: 1rem;
+}
+.finder h3 {
+  margin: 1rem 0 1.5rem 0;
+}
+.finder input {
+  margin: 1rem 0 1rem 0;
+  border: solid 1px rgb(226, 226, 226);
+}
+.finder .cat-btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+.finder .cat-btn button {
+  width: 100%;
+}
+.finder .cat-btn button:nth-of-type(2) {
+  margin: 0 10px;
+}
+.finder .results {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 60vh;
+}
+.finder .results img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.hero {
+  height: 100%;
 }

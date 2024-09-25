@@ -3,8 +3,10 @@
 // VARIABLES
 
 $primary-color: #333;
+$bgn-color: rgb(226, 226, 226);
 $btn-bgn-color: rgba(255, 255, 255, 0.153);
 $default-radius: 5px;
+$secondary-radius: 8px;
 
 // MIXIN
 
@@ -20,18 +22,26 @@ body {
   margin: 4px;
 }
 
+button {
+  cursor: pointer;
+}
+
 // HEADER
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top-left-radius: $default-radius;
-  border-top-right-radius: $default-radius;
+  border-top-left-radius: $secondary-radius;
+  border-top-right-radius: $secondary-radius;
   // position: fixed;
   // top: 0;
   // left: 0;
   // right: 0;
+  position: sticky;
+  top: 4px;
+  left: 4px;
+  right: 4px;
   background: linear-gradient(90deg, #00c3ff, #9246f3);
   padding: 5px 20px;
 
@@ -86,22 +96,11 @@ header {
     position: relative;
   }
 
-  // i {
-  //   background-color: rgba(255, 255, 255, 0.317);
-  //   border-radius: 50%;
-  //   // width: 40px;
-  //   // height: 40px;
-  //   font-size: 20px;
-  //   padding: 10px 12px;
-  //   margin-left: 5px;
-  // }
-
   button {
     @include flex-center;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    border: none;
     background-color: $btn-bgn-color;
     box-sizing: border-box;
     margin-left: -5px;
@@ -122,10 +121,8 @@ header {
 .top-nav {
   button {
     background-color: $btn-bgn-color;
-    border: none;
     border-radius: $default-radius;
     height: 40px;
-    cursor: pointer;
   }
   li:nth-of-type(1) button {
     height: 40px;
@@ -143,6 +140,120 @@ header {
   }
 }
 
-
 // MAIN
 
+main {
+  display: grid;
+  grid-template-columns: 1fr 6fr 9fr;
+  background-color: $bgn-color;
+  // height: 90vh;
+}
+
+// MAIN - NAV
+
+main {
+  height: 90vh;
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    // height: 100%;
+    // border: 1px solid black;
+  }
+  nav button {
+    width: 40px;
+    height: 40px;
+    border-radius: $secondary-radius;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
+  }
+  ul {
+    margin-top: 2rem;
+  }
+  li {
+    margin-bottom: 2rem;
+  }
+  li p {
+    text-align: center;
+    padding-top: 3px;
+  }
+
+  .dark-mode {
+    margin-bottom: 2rem;
+  }
+}
+
+// MAIN - FINDER
+
+.finder {
+  display: flex;
+  // align-items: center;
+  // margin: 2rem 0;
+  // border: 1px solid black;
+
+  .finder-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // height: 100%;
+    // width: 100%;
+    background-color: white;
+    border-radius: $secondary-radius;
+    margin: 2rem 0;
+    
+  }
+  input, .search-btn, .results, .cat-btn, .results {
+    width: 90%;
+    
+  }
+  input, button {
+    height: 40px;
+    border-radius: $secondary-radius;
+    box-sizing: border-box;
+  }
+
+  .search-btn {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    margin: 1rem 0 1.5rem 0;
+  }
+  input {
+    margin: 1rem 0 1rem 0;
+    border: solid 1px $bgn-color;
+  }
+  .cat-btn {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .cat-btn button {
+    width: 100%;
+  }
+  .cat-btn button:nth-of-type(2) {
+    margin: 0 10px;
+  }
+  .results {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr) );
+    gap: 10px;
+    // height: 40%;
+    overflow-y: auto;
+    max-height: 60vh;
+  }
+  .results img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: $default-radius;
+  }
+
+  
+}
+
+// MAIN - HERO
+
+.hero {
+  // border: 1px solid black;
+  height: 100%;
+}
