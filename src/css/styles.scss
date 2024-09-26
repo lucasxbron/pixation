@@ -2,8 +2,8 @@
 
 // VARIABLES
 
-$primary-color: #333;
-$secondary-color: #333;
+$primary-color: #00c3ff;
+$secondary-color: #9246f3;
 $bgn-color: rgb(226, 226, 226);
 $btn-bgn-color: rgba(255, 255, 255, 0.153);
 $default-radius: 5px;
@@ -43,7 +43,7 @@ header {
   // top: 4px;
   // left: 4px;
   // right: 4px;
-  background: linear-gradient(90deg, #00c3ff, #9246f3);
+  background: linear-gradient(90deg, $primary-color, $secondary-color);
   padding: 5px 20px;
 
   h1 {
@@ -163,7 +163,7 @@ main {
 // MAIN - NAV
 
 main {
-  height: 90vh;
+  height: 93vh;
   nav {
     display: flex;
     flex-direction: column;
@@ -296,7 +296,7 @@ main {
   // row-gap: 40px;
   
   overflow-y: auto;
-  max-height: 62vh;
+  max-height: 64.5vh;
   margin-top: 10px;
   img{
     width: 100%;
@@ -320,6 +320,7 @@ main {
   }
   img {
     width: 50%;
+    object-fit: cover;
   }
   h3 {
     font-size: 24px;
@@ -333,3 +334,24 @@ main {
   }
 }
 
+// FOOTER
+
+footer {
+  background: linear-gradient(90deg, $primary-color, $secondary-color);
+  height: 25px;
+  position: fixed;
+  bottom:0;
+  left: 0;
+  right: 0;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // font-size: 0.8rem;
+  // ul {
+  //   display: flex;
+  //   align-items: center;
+  // }
+  // li {
+  //   padding-right: 15px;
+  // }
+}

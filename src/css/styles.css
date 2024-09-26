@@ -111,7 +111,7 @@ main {
 }
 
 main {
-  height: 90vh;
+  height: 93vh;
 }
 main nav {
   display: flex;
@@ -221,7 +221,7 @@ main .dark-mode {
 
 .hero-content {
   overflow-y: auto;
-  max-height: 62vh;
+  max-height: 64.5vh;
   margin-top: 10px;
 }
 .hero-content img {
@@ -245,6 +245,7 @@ main .dark-mode {
 }
 .hero-details img {
   width: 50%;
+  object-fit: cover;
 }
 .hero-details h3 {
   font-size: 24px;
@@ -255,4 +256,13 @@ main .dark-mode {
   width: 50%;
   height: 40px;
   margin-top: 10px;
+}
+
+footer {
+  background: linear-gradient(90deg, #00c3ff, #9246f3);
+  height: 25px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
