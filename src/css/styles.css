@@ -23,6 +23,12 @@
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Open Sans";
+  src: url("/assets/google-fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
 body {
   font-family: "Open Sans", sans-serif;
 }
