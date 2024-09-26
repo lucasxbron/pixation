@@ -1,4 +1,4 @@
-@import "./reset.css";
+@import "/reset.css";
 @font-face {
   font-family: "Open Sans";
   src: url("/assets/google-fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
