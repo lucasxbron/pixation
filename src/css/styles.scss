@@ -8,6 +8,7 @@ $bgn-color: rgb(226, 226, 226);
 $btn-bgn-color: rgba(255, 255, 255, 0.153);
 $default-radius: 5px;
 $secondary-radius: 8px;
+$btn-hover: linear-gradient(45deg, #9246f3, #00c3ff);
 
 // FONTS
 
@@ -198,6 +199,9 @@ main {
   grid-template-columns: 1fr 4fr 7fr;
   background-color: $bgn-color;
   // height: 90vh;
+  button:hover {
+    background: $btn-hover;
+  }
 }
 
 // MAIN - NAV
@@ -268,6 +272,7 @@ main {
 
   .search-btn {
     margin-bottom: 1rem;
+    background-color: #af71ff;
   }
   h3 {
     margin: 1rem 0 1.5rem 0;
@@ -279,9 +284,14 @@ main {
   .cat-btn {
     display: flex;
     justify-content: space-evenly;
+    
   }
   .cat-btn button {
     width: 100%;
+    font-size: 15px;
+  }
+  .cat-btn button:active {
+  
   }
   .cat-btn button:nth-of-type(2) {
     margin: 0 10px;
@@ -359,8 +369,9 @@ main {
     padding: 20px;
   }
   img {
-    width: 50%;
+    width: 40%;
     object-fit: cover;
+    padding: 40px;
   }
   h3 {
     font-size: 24px;

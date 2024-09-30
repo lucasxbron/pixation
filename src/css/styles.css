@@ -143,6 +143,9 @@ main {
   grid-template-columns: 1fr 4fr 7fr;
   background-color: rgb(226, 226, 226);
 }
+main button:hover {
+  background: linear-gradient(45deg, #9246f3, #00c3ff);
+}
 
 main {
   height: 93vh;
@@ -199,6 +202,7 @@ main .dark-mode {
 }
 .finder .search-btn {
   margin-bottom: 1rem;
+  background-color: #af71ff;
 }
 .finder h3 {
   margin: 1rem 0 1.5rem 0;
@@ -213,6 +217,7 @@ main .dark-mode {
 }
 .finder .cat-btn button {
   width: 100%;
+  font-size: 15px;
 }
 .finder .cat-btn button:nth-of-type(2) {
   margin: 0 10px;
@@ -278,8 +283,9 @@ main .dark-mode {
   padding: 20px;
 }
 .hero-details img {
-  width: 50%;
+  width: 40%;
   object-fit: cover;
+  padding: 40px;
 }
 .hero-details h3 {
   font-size: 24px;
