@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "sass ./src/css/styles.scss ./src/css/styles.css --no-source-map --watch",
-    "build": "react-scripts build"
+    "compile": "sass ./src/css/styles.scss ./src/css/styles.css --no-source-map --watch"
   },
   "author": "",
   "license": "ISC",

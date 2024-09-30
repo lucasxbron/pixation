@@ -4,6 +4,8 @@
 
 $primary-color: #00c3ff;
 $secondary-color: #9246f3;
+$accent-color: #17d7ca;
+$off-color: rgb(95, 95, 95);
 $bgn-color: rgb(226, 226, 226);
 $btn-bgn-color: rgba(255, 255, 255, 0.153);
 $default-radius: 5px;
@@ -13,39 +15,49 @@ $btn-hover: linear-gradient(45deg, #9246f3, #00c3ff);
 // FONTS
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-family: "Open Sans";
+  src: url("/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-family: "Open Sans";
+  src: url("/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Open Sans';
-  src: url('/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-family: "Open Sans";
+  src: url("/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'Open Sans';
-  src: url('/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-family: "Open Sans";
+  src: url("/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-family: "Open Sans";
+  src: url("/assets/google-fonts/OpenSans-VariableFont_wdth\,wght.ttf")
+    format("truetype");
   font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("/assets/google-fonts/Pacifico-Regular.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -61,7 +73,8 @@ $btn-hover: linear-gradient(45deg, #9246f3, #00c3ff);
 
 body {
   // margin: 4px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
+  // height: 100vh;
 }
 
 button {
@@ -88,8 +101,9 @@ header {
   padding: 5px 20px;
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: white;
+    font-family: "Pacifico", cursive;
   }
 
   nav {
@@ -97,14 +111,14 @@ header {
     align-content: center;
     justify-content: space-between;
   }
-
 }
 
 .logo {
   @include flex-center;
   margin-left: 5px;
+  cursor: pointer;
   img {
-    height:40px;
+    height: 40px;
     padding-right: 10px;
   }
 }
@@ -158,7 +172,6 @@ header {
     margin-left: -5px;
     margin-top: -2px;
   }
-
   .fa-plus {
     color: white;
     font-size: 1rem;
@@ -192,6 +205,10 @@ header {
   }
 }
 
+button:hover {
+  background-color: rgba(255, 255, 255, 0.291);
+}
+
 // MAIN
 
 main {
@@ -201,13 +218,14 @@ main {
   // height: 90vh;
   button:hover {
     background: $btn-hover;
+    color: white;
   }
 }
 
 // MAIN - NAV
 
 main {
-  height: 93vh;
+  height: 95vh;
   nav {
     display: flex;
     flex-direction: column;
@@ -232,12 +250,24 @@ main {
   }
   li p {
     text-align: center;
-    padding-top: 3px;
+    padding-top: 10px;
+    font-size: 13px;
   }
 
   .dark-mode {
     margin-bottom: 2rem;
   }
+  i {
+    font-size: 1.1rem;
+  }
+  p,
+  i {
+    color: $off-color;
+  }
+}
+
+button:hover i {
+  color: white;
 }
 
 // MAIN - FINDER
@@ -258,24 +288,40 @@ main {
     border-radius: $secondary-radius;
     margin: 2rem 0;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
-    
   }
-  input, .search-btn, .results, .cat-btn, .results {
+  input,
+  .search-btn,
+  .results,
+  .cat-btn,
+  .results {
     width: 90%;
-    
   }
-  input, button {
+  input:focus {
+    outline: 1px solid rgb(163, 163, 163);
+  }
+  input {
+    padding-left: 10px;
+  }
+  input,
+  button {
     height: 40px;
     border-radius: $secondary-radius;
     box-sizing: border-box;
   }
 
+  .search-btn, .cat-btn button {
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
   .search-btn {
     margin-bottom: 1rem;
-    background-color: #af71ff;
+    // background-color: #7F55F4;
+    // font-size: 14px;
   }
   h3 {
     margin: 1rem 0 1.5rem 0;
+    font-size: 18px;
   }
   input {
     margin: 1rem 0 1rem 0;
@@ -284,26 +330,22 @@ main {
   .cat-btn {
     display: flex;
     justify-content: space-evenly;
-    
   }
   .cat-btn button {
     width: 100%;
-    font-size: 15px;
-  }
-  .cat-btn button:active {
-  
+    // font-size: 15px;
   }
   .cat-btn button:nth-of-type(2) {
     margin: 0 10px;
   }
   .results {
-    flex-grow: 1;
+    // flex-grow: 1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     // height: 40%;
     overflow-y: auto;
-    max-height: 60vh;
+    max-height: 65vh;
   }
   .results img {
     width: 100%;
@@ -311,8 +353,6 @@ main {
     object-fit: cover;
     border-radius: $default-radius;
   }
-
-  
 }
 
 // MAIN - HERO
@@ -325,16 +365,18 @@ main {
   box-shadow: -5px 0 10px -1px rgba(0, 0, 0, 0.088);
   // background-color: rgb(240, 240, 240);
   background-color: white;
+  
 }
 
 .hero-img {
-  background-image: url(/assets/images/user-image-placeholder-1.jpeg);
+  background-image: url(/assets/images/hero-image.webp);
   width: 100%;
   height: 30%;
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   @include flex-center;
   color: white;
+  text-align: center;
   h1 {
     font-size: 3rem;
   }
@@ -344,11 +386,11 @@ main {
   // display: grid;
   // grid-template-columns: 1fr 1fr;
   // row-gap: 40px;
-  
+
   overflow-y: auto;
   max-height: 64.5vh;
   margin-top: 10px;
-  img{
+  img {
     width: 100%;
   }
   div:nth-of-type(even) {
@@ -361,17 +403,22 @@ main {
   display: flex;
   align-items: left;
   justify-content: center;
+  max-height: 400px;
+
   div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    padding: 20px;
+    padding-right: 20px;
   }
+
   img {
     width: 40%;
-    object-fit: cover;
-    padding: 40px;
+    // max-height: 300px;
+    object-fit: contain;
+    // padding: 40px;
+    // max-height: 300px;
   }
   h3 {
     font-size: 24px;
@@ -383,6 +430,28 @@ main {
     height: 40px;
     margin-top: 10px;
   }
+  p {
+    color: $off-color;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+.hero-details:nth-of-type(even) p,
+.hero-details:nth-of-type(even) h3 {
+  padding-left: 40px;
+}
+
+.hero-details:nth-of-type(1) p,
+.hero-details:nth-of-type(1) h3,
+.hero-details:nth-of-type(1) button {
+  margin-left: 40px;
+}
+
+.sign-up-btn {
+  background-color: #17d7ca;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 // FOOTER
@@ -391,7 +460,7 @@ footer {
   background: linear-gradient(90deg, $primary-color, $secondary-color);
   height: 25px;
   position: fixed;
-  bottom:0;
+  bottom: 0;
   left: 0;
   right: 0;
   // display: flex;
