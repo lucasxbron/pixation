@@ -446,7 +446,7 @@ button:hover i {
   display: flex;
   align-items: left;
   justify-content: center;
-  max-height: 400px;
+  max-height: 300px;
   min-height: 250px;
 
   div {
@@ -479,6 +479,10 @@ button:hover i {
     font-size: 14px;
     line-height: 1.5;
   }
+}
+
+.hero-details:first-of-type {
+  min-height: 350px;
 }
 
 .hero-details:nth-of-type(even) p,
