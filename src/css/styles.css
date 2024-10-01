@@ -296,6 +296,7 @@ button:hover i {
   height: auto;
   object-fit: cover;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .hero {
