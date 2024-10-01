@@ -5,12 +5,40 @@
 $primary-color: #00c3ff;
 $secondary-color: #9246f3;
 $accent-color: #17d7ca;
+$text-color-light: black;
+$box-shadow-light: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
 $off-color: rgb(95, 95, 95);
-$bgn-color: rgb(226, 226, 226);
+$hero-off-color-light: rgb(240, 240, 240);
+$bgn-color-light: rgb(226, 226, 226);
+$bgn-color-light-wb: white;
 $btn-bgn-color: rgba(255, 255, 255, 0.153);
 $default-radius: 5px;
 $secondary-radius: 8px;
 $btn-hover: linear-gradient(45deg, #9246f3, #00c3ff);
+
+$bgn-color-dark: rgb(31, 31, 31);
+$bgn-color-dark-wb: #343434;
+$text-color-dark: white;
+$box-shadow-dark: 1px 1px 2px 2px rgba(255, 255, 255, 0.088);
+$hero-off-color-dark: #2c2c2c;
+
+// DARK MODE
+
+:root {
+  --bg-color: #{$bgn-color-light};
+  --bg-color-wb: #{$bgn-color-light-wb};
+  --text-color: #{$text-color-light};
+  --box-shadow: #{$box-shadow-light};
+  --hero-off-color: #{$hero-off-color-light};
+}
+
+body.dark-mode {
+  --bg-color: #{$bgn-color-dark};
+  --bg-color-wb: #{$bgn-color-dark-wb};
+  --text-color: #{$text-color-dark};
+  --box-shadow: #{$box-shadow-dark};
+  --hero-off-color: #{$hero-off-color-dark};
+}
 
 // FONTS
 
@@ -80,6 +108,20 @@ body {
 button {
   cursor: pointer;
 }
+
+// button, input {
+//   background: linear-gradient(90deg, $primary-color, $secondary-color);
+// }
+
+p,
+h2,
+h3 {
+  color: var(--text-color) !important;
+}
+
+// button:not(.sign-up-btn) {
+//   background-color: var(--bg-color);
+// }
 
 // HEADER
 
@@ -214,7 +256,7 @@ button:hover {
 main {
   display: grid;
   grid-template-columns: 1fr 4fr 7fr;
-  background-color: $bgn-color;
+  background-color: var(--bg-color);
   // height: 90vh;
   button:hover {
     background: $btn-hover;
@@ -238,7 +280,7 @@ main {
     width: 40px;
     height: 40px;
     border-radius: $secondary-radius;
-    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
+    box-shadow: var(--box-shadow);
   }
   ul {
     margin-top: 2rem;
@@ -284,7 +326,7 @@ button:hover i {
     flex-direction: column;
     // height: 100%;
     // width: 100%;
-    background-color: white;
+    background-color: var(--bg-color-wb);
     border-radius: $secondary-radius;
     margin: 2rem 0;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
@@ -326,7 +368,7 @@ button:hover i {
   }
   input {
     margin: 1rem 0 1rem 0;
-    border: solid 1px $bgn-color;
+    border: solid 1px var(--bg-color);
   }
   .cat-btn {
     display: flex;
@@ -346,7 +388,7 @@ button:hover i {
     gap: 10px;
     // height: 40%;
     overflow-y: auto;
-    max-height: 65vh;
+    max-height: 68vh;
   }
   .results img {
     width: 100%;
@@ -365,7 +407,7 @@ button:hover i {
   margin-left: 20px;
   box-shadow: -5px 0 10px -1px rgba(0, 0, 0, 0.088);
   // background-color: rgb(240, 240, 240);
-  background-color: white;
+  background-color: var(--bg-color-wb);
 }
 
 .hero-img {
@@ -394,7 +436,7 @@ button:hover i {
     width: 100%;
   }
   div:nth-of-type(even) {
-    background-color: rgb(240, 240, 240);
+    background-color: var(--hero-off-color);
   }
 }
 
@@ -536,10 +578,9 @@ footer {
     margin: 0;
   }
   .hero-content {
-    overflow-y:visible;
+    overflow-y: visible;
   }
 }
-
 
 @media (max-width: 510px) {
   header h1 {

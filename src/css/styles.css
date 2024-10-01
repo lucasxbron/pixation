@@ -1,4 +1,20 @@
 @import "/src/css/reset.css";
+:root {
+  --bg-color: rgb(226, 226, 226);
+  --bg-color-wb: white;
+  --text-color: black;
+  --box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
+  --hero-off-color: rgb(240, 240, 240);
+}
+
+body.dark-mode {
+  --bg-color: rgb(31, 31, 31);
+  --bg-color-wb: #343434;
+  --text-color: white;
+  --box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.088);
+  --hero-off-color: #2c2c2c;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("/assets/google-fonts/OpenSans-VariableFont_wdth,wght.ttf") format("truetype");
@@ -41,6 +57,12 @@ body {
 
 button {
   cursor: pointer;
+}
+
+p,
+h2,
+h3 {
+  color: var(--text-color) !important;
 }
 
 header {
@@ -153,7 +175,7 @@ button:hover {
 main {
   display: grid;
   grid-template-columns: 1fr 4fr 7fr;
-  background-color: rgb(226, 226, 226);
+  background-color: var(--bg-color);
 }
 main button:hover {
   background: linear-gradient(45deg, #9246f3, #00c3ff);
@@ -173,7 +195,7 @@ main nav button {
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
+  box-shadow: var(--box-shadow);
 }
 main ul {
   margin-top: 2rem;
@@ -212,7 +234,7 @@ button:hover i {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--bg-color-wb);
   border-radius: 8px;
   margin: 2rem 0;
   box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.088);
@@ -250,7 +272,7 @@ button:hover i {
 }
 .finder input {
   margin: 1rem 0 1rem 0;
-  border: solid 1px rgb(226, 226, 226);
+  border: solid 1px var(--bg-color);
 }
 .finder .cat-btn {
   display: flex;
@@ -267,7 +289,7 @@ button:hover i {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 10px;
   overflow-y: auto;
-  max-height: 65vh;
+  max-height: 68vh;
 }
 .finder .results img {
   width: 100%;
@@ -279,7 +301,7 @@ button:hover i {
 .hero {
   margin-left: 20px;
   box-shadow: -5px 0 10px -1px rgba(0, 0, 0, 0.088);
-  background-color: white;
+  background-color: var(--bg-color-wb);
 }
 
 .hero-img {
@@ -307,7 +329,7 @@ button:hover i {
   width: 100%;
 }
 .hero-content div:nth-of-type(even) {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--hero-off-color);
 }
 
 .hero-details {
