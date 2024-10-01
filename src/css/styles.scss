@@ -251,7 +251,7 @@ main {
   li p {
     text-align: center;
     padding-top: 10px;
-    font-size: 13px;
+    font-size: 0.85rem;
   }
 
   .dark-mode {
@@ -309,7 +309,8 @@ button:hover i {
     box-sizing: border-box;
   }
 
-  .search-btn, .cat-btn button {
+  .search-btn,
+  .cat-btn button {
     font-size: 0.85rem;
     font-weight: 500;
   }
@@ -365,7 +366,6 @@ button:hover i {
   box-shadow: -5px 0 10px -1px rgba(0, 0, 0, 0.088);
   // background-color: rgb(240, 240, 240);
   background-color: white;
-  
 }
 
 .hero-img {
@@ -404,6 +404,7 @@ button:hover i {
   align-items: left;
   justify-content: center;
   max-height: 400px;
+  min-height: 250px;
 
   div {
     display: flex;
@@ -474,4 +475,111 @@ footer {
   // li {
   //   padding-right: 15px;
   // }
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 1052px) {
+  .hero-details:nth-of-type(1) {
+    min-height: 280px;
+  }
+}
+
+// @media (max-width: 824px) {
+//   .hero-details:not(:nth-child(1)) {
+//     min-height: 250px;
+//   }
+// }
+
+// @media (min-width: 781px) {
+//   nav li:last-of-type {
+//     display: none;
+//   }
+// }
+
+@media (max-width: 780px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    nav li:not(:last-of-type) {
+      margin-right: 20px;
+    }
+    .dark-mode {
+      display: none;
+    }
+    nav {
+      margin-left: 20px;
+      margin-right: 20px;
+      max-height: 100px;
+    }
+    nav button {
+      // margin: 0;
+      width: 70px;
+    }
+  }
+  footer {
+    display: none;
+  }
+  .results {
+    height: 40vh;
+  }
+  .hero {
+    margin: 0;
+  }
+  .hero-content {
+    overflow-y:visible;
+  }
+}
+
+
+@media (max-width: 510px) {
+  header h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 470px) {
+  nav button {
+    // margin: 0;
+    max-width: 60px;
+  }
+  nav p {
+    display: none;
+  }
+  main nav {
+    max-height: 70px;
+  }
+}
+
+@media (max-width: 433px) {
+  .hero-details:nth-of-type(1) {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 420px) {
+  nav button {
+    // margin: 0;
+    max-width: 40px;
+  }
+  nav ul {
+    nav li:not(:last-of-type) {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .users li:not(:last-of-type) {
+    display: none;
+  }
 }

@@ -188,7 +188,7 @@ main li {
 main li p {
   text-align: center;
   padding-top: 10px;
-  font-size: 13px;
+  font-size: 0.85rem;
 }
 main .dark-mode {
   margin-bottom: 2rem;
@@ -236,7 +236,8 @@ button:hover i {
   border-radius: 8px;
   box-sizing: border-box;
 }
-.finder .search-btn, .finder .cat-btn button {
+.finder .search-btn,
+.finder .cat-btn button {
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -314,6 +315,7 @@ button:hover i {
   align-items: left;
   justify-content: center;
   max-height: 400px;
+  min-height: 250px;
 }
 .hero-details div {
   display: flex;
@@ -366,4 +368,85 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+@media (max-width: 1052px) {
+  .hero-details:nth-of-type(1) {
+    min-height: 280px;
+  }
+}
+@media (max-width: 780px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: white;
+  }
+  main nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  main nav li:not(:last-of-type) {
+    margin-right: 20px;
+  }
+  main .dark-mode {
+    display: none;
+  }
+  main nav {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-height: 100px;
+  }
+  main nav button {
+    width: 70px;
+  }
+  footer {
+    display: none;
+  }
+  .results {
+    height: 40vh;
+  }
+  .hero {
+    margin: 0;
+  }
+  .hero-content {
+    overflow-y: visible;
+  }
+}
+@media (max-width: 510px) {
+  header h1 {
+    display: none;
+  }
+}
+@media (max-width: 470px) {
+  nav button {
+    max-width: 60px;
+  }
+  nav p {
+    display: none;
+  }
+  main nav {
+    max-height: 70px;
+  }
+}
+@media (max-width: 433px) {
+  .hero-details:nth-of-type(1) {
+    min-height: 350px;
+  }
+}
+@media (max-width: 420px) {
+  nav button {
+    max-width: 40px;
+  }
+  nav ul nav li:not(:last-of-type) {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 400px) {
+  .users li:not(:last-of-type) {
+    display: none;
+  }
 }
