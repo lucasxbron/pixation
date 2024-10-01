@@ -157,7 +157,7 @@ header {
 
 .logo {
   @include flex-center;
-  margin-left: 5px;
+  // margin-left: 5px;
   cursor: pointer;
   img {
     height: 40px;
