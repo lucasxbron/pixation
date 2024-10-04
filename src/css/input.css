@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+      --color-primary: 0, 195, 255;
+      --color-secondary: 146, 70, 243;
+      --color-btn: 255, 255, 255;
+    }
+  }
+
+@layer base {
+    @font-face {
+        font-family: "Pacifico";
+        src: url("/assets/google-fonts/Pacifico-Regular.ttf") format("truetype");
+        font-weight: 600;
+        font-style: normal;
+      }
+  }
