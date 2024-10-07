@@ -10,100 +10,108 @@
     <link href="/assets/fontawesome/css/solid.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="flex justify-between items-center bg-gradient-to-r from-primary to-secondary py-2 px-5">
+    <header
+      class="flex justify-between items-center bg-gradient-to-r from-primary to-secondary py-2 px-5"
+    >
       <div class="flex items-center">
         <img src="/assets/images/pixation-logo.png" alt="" class="h-10 pr-2" />
-        <h1 class="text-2xl text-white font-serif">Pixation</h1>
+        <h1 class="text-2xl text-white font-serif max-[464px]:hidden max-[364px]:block">Pixation</h1>
       </div>
       <nav class="flex justify-between">
-        <ul class="flex items-center mr-4">
-          <li class="z-40 max-[640px]:hidden">
+        <ul class="mr-4 hidden md:flex items-center">
+          <li class="z-40">
             <img
               src="/assets/images/user-image-placeholder-1.jpeg"
               alt="user image female protagonist"
-              class="w-10 rounded-full border-2 border-white "
+              class="w-10 rounded-full border-2 border-white"
             />
           </li>
-          <li class="m-[-5px] z-30 max-[640px]:hidden">
+          <li class="m-[-5px] z-30">
             <img
               src="/assets/images/user-image-placeholder-2.jpeg"
               alt="user image male protagonist"
               class="w-10 rounded-full border-2 border-white"
             />
           </li>
-          <li class="z-20 max-[640px]:hidden">
+          <li class="z-20">
             <img
               src="/assets/images/user-image-placeholder-3.jpeg"
               alt="user image female protagonist"
               class="w-10 rounded-full border-2 border-white"
             />
           </li>
-          <li class="m-[-5px] z-10 max-[390px]:hidden">
-            <button class="flex items-center justify-center w-10 h-10 rounded-full bg-btn hover:bg-btnhover">
-              <i
-                class="fa-solid fa-plus text-white"
-              ></i>
+          <li class="m-[-5px] z-10 ">
+            <button
+              class="flex items-center justify-center w-10 h-10 rounded-full bg-btn hover:bg-btnhover"
+            >
+              <i class="fa-solid fa-plus text-white"></i>
             </button>
           </li>
         </ul>
 
-        <ul class="flex items-center">
+        <ul class="flex items-center text-white">
           <li>
-            <button class="w-16 h-10 bg-btn hover:bg-btnhover rounded-md"><i class="fa-solid fa-arrow-up-from-bracket text-white"></i></button>
+            <button class="w-16 h-10 bg-btn hover:bg-btnhover rounded-md max-[364px]:hidden">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </button>
           </li>
           <li class="mx-1">
-            <button class="w-10 h-10 bg-btn hover:bg-btnhover rounded-md"><i class="fa-regular fa-user text-white"></i></button>
+            <button class="w-16 md:w-10 h-10 bg-btn hover:bg-btnhover rounded-md max-[364px]:hidden">
+              <i class="fa-regular fa-user"></i>
+            </button>
+          </li>
+          <li class="mr-1">
+            <button
+              class="w-16 md:w-10 h-10 bg-btn hover:bg-btnhover rounded-md"
+              id="darkModeToggle"
+            >
+              <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
           </li>
           <li>
-            <button class="w-10 h-10 bg-btn hover:bg-btnhover rounded-md"><i class="fa-solid fa-bars text-white"></i></button>
+            <button class="w-16 md:w-10 h-10 bg-btn hover:bg-btnhover rounded-md">
+              <i class="fa-solid fa-bars"></i>
+            </button>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main class="grid grid-rows-3 md:grid-cols-3">
-      <nav>
-        <ul>
-          <li>
-            <button><i class="fa-regular fa-image"></i></button>
+    <main class="grid grid-rows-3 md:grid-cols-3 md:items-start">
+      <nav class="py-6 px-4">
+        <ul class="flex justify-between md:flex-col text-center text-white">
+          <li class="w-1/5 mx-1">
+            <button class="flex-1 bg-red-400 w-full h-10 rounded-md"><i class="fa-regular fa-image"></i></button>
             <p>Images</p>
           </li>
-          <li>
-            <button><i class="fa-solid fa-film"></i></button>
+          <li class="w-1/5 mx-1">
+            <button class="flex-1 bg-red-400 w-full h-10 rounded-md"><i class="fa-solid fa-film"></i></button>
             <p>Videos</p>
           </li>
-          <li>
-            <button><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+          <li class="w-1/5 mx-1">
+            <button class="flex-1 bg-red-400 w-full h-10 rounded-md"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
             <p>Designs</p>
           </li>
-          <li>
-            <button><i class="fa-solid fa-icons"></i></button>
+          <li class="w-1/5 mx-1">
+            <button class="flex-1 bg-red-400 w-full h-10 rounded-md"><i class="fa-solid fa-icons"></i></button>
             <p>Elements</p>
           </li>
-          <li>
-            <button><i class="fa-solid fa-store"></i></button>
+          <li class="w-1/5 mx-1">
+            <button class="flex-1 bg-red-400 w-full h-10 rounded-md"><i class="fa-solid fa-store"></i></button>
             <p>Brands</p>
           </li>
-          <!-- <li>
-            <button class="dark-mode">
-              <i class="fa-solid fa-circle-half-stroke"></i>
-            </button>
-          </li> -->
         </ul>
-        <button class="dark-mode desktop-button" id="darkModeToggle">
-          <i class="fa-solid fa-circle-half-stroke"></i>
-        </button>
       </nav>
-      <section class="finder">
-        <div class="finder-wrapper">
-          <h3>Media Finder</h3>
-          <div class="cat-btn">
-            <button>Latest</button>
-            <button>Popular</button>
-            <button>Random</button>
+      <section class="px-8">
+        <div class="flex flex-col items-center">
+          <h3 class="text-xl">Media Finder</h3>
+          <div class="w-full flex justify-center">
+            <button class="bg-red-400 w-full h-10 rounded-md">Latest</button>
+            <button class="bg-red-400 w-full h-10 rounded-md mx-2">Popular</button>
+            <button class="bg-red-400 w-full h-10 rounded-md">Random</button>
           </div>
-          <input type="text" placeholder="Search" />
-          <button class="search-btn">Search now</button>
+          <input type="text" placeholder="Search" class="my-4 bg-red-400 w-full h-10 rounded-md"/>
+          <button class="bg-red-400 w-full h-10 rounded-md mb-4">Search now</button>
           <div class="results">
             <img src="/assets/images/mountain.webp" alt="placeholder image" />
             <img src="/assets/images/mountain.webp" alt="placeholder image" />

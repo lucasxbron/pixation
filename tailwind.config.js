@@ -16,9 +16,9 @@ module.exports = {
       gridTemplateColumns: {
         3: "1fr 4fr 7fr",
       },
-      // gridTemplateRows: {
-      //   '3': '1fr 4fr 7fr',
-      // }
+      gridTemplateRows: {
+        '3': 'auto-fit',
+      }
     },
   },
   plugins: [],
